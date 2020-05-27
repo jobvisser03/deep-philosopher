@@ -13,7 +13,7 @@ from fastai import *
 from fastai.text import *
 
 # model_file_url = 'https://drive.google.com/uc?export=download&id=1BSFr6LtKeQ2ueBGHsKkZ2eOfHFgKZX6j'
-model_file_url = 'https://1drv.ms/u/s!AsCIAADa6C6j0TfCWxyUQadkSZjH?e=Th0sIr'
+model_file_url = 'https://www.dropbox.com/s/oct3mfzccpzsmhz/deep_philosopher_fine_tuned.pth?dl=1'
 model_file_name = 'deep_philosopher_fine_tuned'
 path = Path(__file__).parent
 
@@ -58,9 +58,8 @@ async def analyze(request):
 
 def textResponse(data):
     csv_string = learn.predict(data['file'], 60, 
-                    temperature=0.8, min_p=0.0001
+                    temperature=0.7, min_p=0.0001
                     )
-    csv_string = csv_string.split('.')[:-1]
     time.sleep(2)
 
     words = csv_string.split()
@@ -84,7 +83,10 @@ def textResponse(data):
             words[i-1]+= words[i]
             words[i] = ''
 
-    return ' '.join(words)
+    out_string = ' '.join(words)
+    out_string = ''.join(out_string.split('.')[:-1]) + '.'
+
+    return out_string
 
 if __name__ == '__main__':
     if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=5042)
