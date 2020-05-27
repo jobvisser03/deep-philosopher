@@ -1,3 +1,5 @@
+app/models/*.pth
+app/static/*.pkl
 **.ipynb_checkpoints
 **.afphoto
 **.vscode
