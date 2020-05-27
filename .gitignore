@@ -1,4 +1,5 @@
-app/models/*.pth
+app/static/models/*
+app/models/*
 app/static/*.pkl
 **.ipynb_checkpoints
 **.afphoto
