@@ -1,2 +1,5 @@
 docker build -t deep-philosopher . &&
-docker run --rm -it -p 5042:5042 deep-philosopher
+docker run --rm -it -p 8080:8080 deep-philosopher
+
+
+gcloud app deploy

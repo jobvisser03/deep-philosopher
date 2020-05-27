@@ -89,5 +89,5 @@ def textResponse(data):
     return out_string
 
 if __name__ == '__main__':
-    if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=5042)
+    if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)
 
