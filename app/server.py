@@ -12,7 +12,8 @@ import time
 from fastai import *
 from fastai.text import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1BSFr6LtKeQ2ueBGHsKkZ2eOfHFgKZX6j'
+# model_file_url = 'https://drive.google.com/uc?export=download&id=1BSFr6LtKeQ2ueBGHsKkZ2eOfHFgKZX6j'
+model_file_url = 'https://1drv.ms/u/s!AsCIAADa6C6j0TfCWxyUQadkSZjH?e=Th0sIr'
 model_file_name = 'deep_philosopher_fine_tuned'
 path = Path(__file__).parent
 
@@ -29,7 +30,7 @@ async def download_file(url, dest):
 
 async def setup_learner():
     # not needed for running local
-    # await download_file(model_file_url, path/'models'/f'{model_file_name}.pth')
+    await download_file(model_file_url, path/'models'/f'{model_file_name}.pth')
     data_lm = load_data(path/'static', 'data_lm.pkl', bs=48)
     data_bunch = (TextList.from_csv(path, csv_name='static/blank.csv', vocab=data_lm.vocab)
         .random_split_by_pct()
@@ -56,9 +57,10 @@ async def analyze(request):
     return JSONResponse({'result': textResponse(data)})
 
 def textResponse(data):
-    csv_string = learn.predict(data['file'], 38, 
-                    temperature=0.5, min_p=0.001
+    csv_string = learn.predict(data['file'], 60, 
+                    temperature=0.8, min_p=0.0001
                     )
+    csv_string = csv_string.split('.')[:-1]
     time.sleep(2)
 
     words = csv_string.split()
