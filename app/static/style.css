@@ -1,0 +1,171 @@
+body {
+    background-image: url(../static/descartes-custom-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+ }
+
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px) {
+    body {
+    background-image: url(../static/descartes-custom-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: #464646;
+  }
+}
+
+input {
+    width: 400px;
+    height: auto;
+    border-radius: 1px;
+    padding: 20px;
+    margin-top: 0px;
+    margin-right: 2em;
+    border: 0;
+    background-color: #ffffff;
+    font-size: 20px;
+    margin-left: 0.0em;
+}
+
+.no-display {
+    display: none;
+}
+
+.img-logo {
+  width: 500px;
+  height: auto;
+  padding-bottom: 15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    margin-left: 3.0em;
+    margin-right: 3.0em;
+    margin-top: 3.0em;
+    padding: 10px;
+    padding-left:0px;
+    padding-right:5px;
+    text-align: left;
+}
+
+.headline {
+    width: 380px;
+    margin-left: 0.0em;
+    margin-top: 0.0em;
+    margin-bottom: 0em;
+    margin-right: 25em;
+    padding: 10px;
+    padding-right: 10px;
+    font-family: 'Helvetica Neue';
+    font-weight: 800;
+    font-size: 32px;
+    font-style: italic;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: left;
+}
+
+.description {
+    width: 400px; 
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    margin-right: 0.5em;
+    font-family: 'Helvetica Neue';
+    font-weight: 800;
+    font-size: 26px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.content {
+    margin-top: 1em;
+}
+
+.analyze {
+    margin-top: 5px;
+}
+
+.result-label {
+    width: 391px; 
+    margin-left: 0em;
+    margin-top: 1em;
+    margin-right: 1.0em;
+    padding: 4px;
+    font-size: 20px;
+    font-family: 'Helvetica Neue';
+    background-color: #ffffff;
+    /* border: solid 1px #1da1f2; */
+    border-radius: 2px;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.arrow-top-left {
+
+}
+
+button.analyze-button {
+    width:auto;
+    height: auto;
+    padding: 8px;
+    border: solid 1px #1da1f2;
+    border-radius: 32px;
+    background-color: #1da1f2;
+    font-size: 22px;
+    font-family: 'Paytone One', sans-serif;
+    color: #ffffff;
+    cursor:pointer;
+    margin-top: 7px;
+    margin-left: 0em;
+}
+
+button:focus {outline:0;}
+
+.navbar {
+  background-color: transparent;
+  margin-top: 20px;
+  width: 100%;
+  font-family: 'Helvetica Neue';
+  font-weight: 800;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.blog {
+    margin-top: 5em;
+    margin-left: 0em;
+    font-family: 'Helvetica Neue';
+    font-weight: 800;
+    font-size: 18px;
+    color: #ffffff; 
+}

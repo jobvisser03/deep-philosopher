@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "deep-philosopher"
+version = "0.1.0"
+description = ""
+authors = ["jobvisser03 <job@dutchdataworks.nl>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pynvx = "^1.0.0"
+torch = "^1.5.0"
+torchvision = "^0.6.0"
+fastai = "^1.0.61"
+jupyter = "^1.0.0"
+notebook = "^6.0.3"
+jupyterlab = "^2.1.2"
+jupyter_contrib_nbextensions = "^0.5.1"
+EbookLib = "^0.17.1"
+beautifulsoup4 = "^4.9.1"
+starlette = "^0.13.4"
+uvicorn = "^0.11.5"
+python-multipart = "^0.0.5"
+aiofiles = "^0.5.0"
+aiohttp = "^3.6.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
