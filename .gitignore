@@ -5,3 +5,5 @@ app/models/*
 **.vscode
 **.code-workspace
 .DS_Store
+
+.vercel

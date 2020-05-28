@@ -3,8 +3,8 @@ env: flex
 runtime_config:
   python_version: 3
 
-# manual_scaling:
-#   instances: 1
+manual_scaling:
+  instances: 1
 # resources:
 #   cpu: 1
 #   memory_gb: 0.5
